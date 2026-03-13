@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>习题解答 - Minamomo</title>
-    
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
@@ -19,17 +18,24 @@
             background-color: #fcfcfc;
         }
         h1 { border-bottom: 2px solid #333; padding-bottom: 10px; }
-        h2 { color: #2c3e50; margin-top: 30px; border-left: 5px solid #2c3e50; padding-left: 10px; }
-        ul { list-style-type: square; }
+        /* 修复后的 h2 */
+        h2 { 
+            color: #2c3e50; 
+            margin-top: 30px; 
+            border-left: 5px solid #2c3e50; 
+            padding-left: 10px;
+            display: block;
+            height: 1.4em; 
+            line-height: 1.4;
+        }
+        ul { list-style-type: square; margin-top: 10px; }
         a { color: #2980b9; text-decoration: none; }
         a:hover { text-decoration: underline; }
         .back-link { margin-bottom: 20px; display: inline-block; font-size: 0.9em; color: #7f8c8d; }
     </style>
 </head>
 <body>
-
     <a href="https://minamomo127430.github.io/" class="back-link">← 返回主页 Back to Home</a>
-
     <h1>习题解答 Exercise Solutions</h1>
 
     <h2>抽象代数 2026 Spring</h2>
@@ -49,6 +55,5 @@
             © 2026 Minamomo | Powered by GitHub Pages
         </p>
     </footer>
-
 </body>
 </html>
