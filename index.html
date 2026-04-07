@@ -3,42 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minamomo's Academic Homepage</title>
+    <title>Minamomo's Mathematical Studio</title>
     
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
-        body {
-            font-family: "Latin Modern Roman", "Computer Modern Roman", "TeX Gyre Termes", 
-                         "Times New Roman", Times, "Noto Serif SC", "SimSun", serif;
-            line-height: 1.7;
-            color: #222;
-            max-width: 850px;
-            margin: 40px auto;
-            padding: 0 25px;
-            -webkit-font-smoothing: antialiased;
+        :root {
+            --accent-color: #e8a87c;
+            --bg-color: #fff5f5;
+            --text-color: #5d5d5d;
+            --link-color: #d88a8a;
         }
-        h1 { border-bottom: 2px solid #333; padding-bottom: 10px; }
-        h2 { color: #2c3e50; margin-top: 30px; border-left: 5px solid #2c3e50; padding-left: 10px; }
-        h3 { color: #16a085; }
-        ul { list-style-type: square; }
-        .update-date { color: #7f8c8d; font-size: 0.9em; }
-        .institution { font-style: italic; color: #555; margin-bottom: 30px; }
-        a { color: #2980b9; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+
+        body {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe4e1 100%);
+            background-attachment: fixed;
+            font-family: "Latin Modern Roman", "TeX Gyre Termes", "Times New Roman", "Noto Serif SC", serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 850px;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 50px 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: "✿";
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2rem;
+            color: #ffb6c1;
+            opacity: 0.5;
+        }
+
+        h1 { 
+            text-align: center;
+            font-weight: normal;
+            color: #8b5a5a;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .institution { 
+            text-align: center;
+            font-style: italic; 
+            font-size: 0.95em;
+            margin-bottom: 40px; 
+        }
+
+        h2 { 
+            color: #a67c7c; 
+            margin-top: 40px; 
+            border-bottom: 1px dashed #d88a8a; 
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        h3 { 
+            color: #b5838d; 
+            margin-top: 25px;
+            font-size: 1.2em;
+        }
+
+        ul { list-style-type: "❧ "; padding-left: 20px; }
+
+        a { 
+            color: var(--link-color); 
+            text-decoration: none; 
+            transition: 0.3s;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover { 
+            color: #c94c4c;
+            border-bottom: 1px solid #c94c4c;
+        }
+
+        .lang-support {
+            font-size: 0.85em;
+            text-align: right;
+            color: #999;
+        }
+
+        .update-date { color: #b5838d; font-family: monospace; }
+
+        hr { border: 0; height: 1px; background: linear-gradient(to right, transparent, #d88a8a, transparent); margin: 40px 0; }
+
+        footer { font-size: 0.8em; color: #aaa; text-align: center; }
+
+        @media (max-width: 600px) {
+            .container { padding: 30px 20px; }
+        }
     </style>
 </head>
 <body>
 
-    <h1>--Minamomo's Mathematical Studio--</h1>
-    <p class="institution"><a href="https://math.sjtu.edu.cn/Default/index" class="link" target="_blank">School of Mathematical Sciences, Shanghai Jiao Tong University (SJTU)</a></p>
+<div class="container">
+    <div class="lang-support">
+        简体中文 | <a href="TraditionalChinese.html">繁體中文</a> | <a href="Japanese.html">日本語</a>
+    </div>
 
-    <p>语言支持: <strong>简体中文</strong> | <a href="TraditionalChinese.html">繁體中文</a> | <a href="Japanese.html">日本語</a></p>
+    <h1>✿ Minamomo's Mathematical Studio ✿</h1>
     
-    <p>本站目前作为个人手稿存放与取用处, 不定时更新.</p>
+    <div class="institution">
+        <a href="https://math.sjtu.edu.cn/Default/index" target="_blank">School of Mathematical Sciences, SJTU</a>
+    </div>
 
-    <h2>公开内容 Public Resources</h2>
+    <p style="text-align: center; font-style: italic; color: #8b5a5a;">
+        "Pure mathematics is the poetry of logical ideas."
+    </p>
+
+    <p> Minamomo 的个人手稿存放处, 不定期更新.</p>
+
+    <h2>手稿与讲义 Lecture notes</h2>
 
     <h3>分析 Analysis</h3>
     <ul>
@@ -48,6 +140,7 @@
 
     <h3>代数 Algebra</h3>
     <ul>
+        <li>代数学 (Algebra)</li>
         <li><a href="泛性质讲稿.pdf">范畴论 (Category Theory)</a></li>
         <li><a href="代数数论讲义(11.23 更新到分歧理论基本公式).pdf">代数数论 (Algebraic Number Theory)</a></li>
     </ul>
@@ -55,23 +148,20 @@
     <h3>概率统计 Probability & Statistics</h3>
     <ul>
         <li><a href="概率论讲义 全1-5 概率论的公理化、一元概率论、多元概率论、中心极限定理、问题.pdf">概率论 (Probability Theory)</a></li>
-        <li><a href="数理统计讲义.pdf">数理统计 (Mathematic Statistics)</a></li>
+        <li><a href="数理统计讲义.pdf">数理统计 (Mathematical Statistics)</a></li>
     </ul>
-
-    <h2>非公开内容 Private Resources</h2>
-    <p>2026 Spring 参考答案</p>
 
     <h2>更新记录 Updating Records</h2>
     <ul>
-        <li><span class="update-date">2026.3.14</span> 完成主页初步建设.</li>
+        <li><span class="update-date">2026.03.14</span> 完成主页初步建设.</li>
+        <li><span class="update-date">2026.04.7</span> 加入主题.</li>
     </ul>
 
     <hr>
     <footer>
-        <p style="text-align: center; font-size: 0.8em; color: #999;">
-            © 2026 Minamomo | Powered by GitHub Pages
-        </p>
+        <p>© 2026 Minamomo | ✿</p>
     </footer>
+</div>
 
 </body>
 </html>
