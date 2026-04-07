@@ -8,35 +8,98 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
+        :root {
+            --accent-color: #e8a87c;
+            --bg-color: #fff5f5;
+            --text-color: #4a4a4a;
+            --link-color: #d88a8a;
+        }
+
         body {
-            font-family: "Latin Modern Roman", "Computer Modern Roman", "TeX Gyre Termes", 
-                         "Times New Roman", Times, "Noto Serif SC", "SimSun", serif;
-            line-height: 1.7;
-            color: #222;
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe4e1 100%);
+            background-attachment: fixed;
+            font-family: "Latin Modern Roman", "TeX Gyre Termes", "Times New Roman", "Noto Serif SC", "SimSun", serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
             max-width: 850px;
-            margin: 40px auto;
-            padding: 0 25px;
-            -webkit-font-smoothing: antialiased;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.88);
+            padding: 50px 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(139, 90, 90, 0.1);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            position: relative;
         }
-        h1 { border-bottom: 2px solid #333; padding-bottom: 10px; }
-        
+
+        .back-link { 
+            margin-bottom: 30px; 
+            display: inline-block; 
+            font-size: 0.9em; 
+            color: #b5838d; 
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .back-link:hover { color: #d88a8a; transform: translateX(-5px); }
+
+        h1 { 
+            text-align: center; 
+            font-weight: normal; 
+            color: #8b5a5a;
+            border-bottom: 1px solid #eee; 
+            padding-bottom: 20px; 
+            letter-spacing: 1px;
+            margin-top: 0;
+        }
+
         h2 { 
-            color: #2c3e50; 
-            margin-top: 30px; 
-            border-left: 5px solid #2c3e50; 
-            padding-left: 10px;
-            display: block;
-            height: 1.4em; 
+            color: #a67c7c; 
+            margin-top: 40px; 
+            border-left: 5px solid #d88a8a; 
+            padding-left: 15px;
             line-height: 1.4;
+            height: auto;
         }
-        ul { list-style-type: square; margin-top: 10px; }
-        a { color: #2980b9; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .back-link { margin-bottom: 20px; display: inline-block; font-size: 0.9em; color: #7f8c8d; }
+
+        ul { list-style-type: "❧ "; padding-left: 20px; }
+
+        li { margin-bottom: 8px; }
+
+        a { 
+            color: var(--link-color); 
+            text-decoration: none; 
+            transition: 0.3s; 
+            border-bottom: 1px solid transparent; 
+        }
+
+        a:hover { 
+            color: #c94c4c; 
+            border-bottom: 1px solid #c94c4c; 
+        }
+
+        hr { border: 0; height: 1px; background: linear-gradient(to right, transparent, #d88a8a, transparent); margin: 40px 0; }
+
+        footer { font-size: 0.8em; color: #aaa; text-align: center; }
+
+        @media (max-width: 600px) {
+            .container { padding: 30px 20px; }
+            h2 { font-size: 1.2em; }
+        }
     </style>
 </head>
 <body>
-    <a href="https://minamomo127430.github.io/" class="back-link">返回主页 Back to Home</a>
+
+<div class="container">
+    <a href="https://minamomo127430.github.io/" class="back-link">← 返回主页 Back to Home</a>
+    
     <h1>2026 Spring 习题解答</h1>
 
     <h2>抽象代数 2026 Spring</h2>
@@ -81,9 +144,9 @@
     
     <hr>
     <footer>
-        <p style="text-align: center; font-size: 0.8em; color: #999;">
-            © 2026 Minamomo | Powered by GitHub Pages
-        </p>
+        <p>© 2026 Minamomo | Powered by GitHub Pages</p>
     </footer>
+</div>
+
 </body>
 </html>
